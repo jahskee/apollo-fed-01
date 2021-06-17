@@ -10,7 +10,7 @@ const typeDefs = gql`
   }
 
   extend type Query {
-    astronaute(id: ID!): Astronaut
+    astronaut(id: ID!): Astronaut
     astronauts: [ Astronaut ]
   }
 `;
