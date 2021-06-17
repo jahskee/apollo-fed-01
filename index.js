@@ -4,12 +4,13 @@ import { ApolloGateway } from '@apollo/gateway';
 const port = 4000;
 
 const gateway = new ApolloGateway({
-  serviceList: [{ "name": "astronauts", url: "http://localhost:4001"}]
+  serviceList: [{ "name": "astronauts", url: "http://localhost:4001"}],
+
 });
 
-const server = new ApolloServer( {
+const server = new ApolloServer({
   gateway,
-  subscription: false,
+  subscriptions: false,
 })
 
 server.listen({ port }).then(({ url }) => {
