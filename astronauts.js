@@ -16,6 +16,11 @@ const typeDefs = gql`
 `;
 
 const resolvers = {
+  Astronaut: {
+    __resolveReference(ref) {
+      return { id: '1111', name: 'Jaison' }
+    }
+  },
   Query:  {
     astronaut(_, { id }) {
       return { id: '1111', name: 'Jaison' }
